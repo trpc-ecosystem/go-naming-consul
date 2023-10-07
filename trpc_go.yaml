@@ -1,0 +1,43 @@
+plugins:
+  naming:
+    consul:
+      address: dev.cloud.com:8500
+      services:
+        - trpc.test.helloworld.Greeter  # Must be the same as trpc service.
+      register:
+        interval: 1s
+        timeout: 1s
+        tags:
+          - test
+        meta:
+          appid: 1
+        weight: 10
+        deregister_critical_service_after: 10m
+      services_register:
+        - service: trpc.test.helloworld.Greeter1
+          register:
+            interval: 10s
+            timeout: 10s
+            tags:
+              - test
+            meta:
+              appid: 1
+            weight: 100
+            deregister_critical_service_after: 1m
+      selector:
+        loadBalancer: random
+
+client:  # Backend configuration for client calls.
+  service:  # Configuration for a single backend.
+    - callee: trpc.test.helloworld.Greeter  # The service name of the backend service protocol file, if the callee is the same as the name below, you only need to configure one.
+      target: consul://trpc.test.helloworld.Greeter  # Backend service address consul.
+      network: tcp  # The network type of the backend service tcp udp.
+      protocol: http  # Application layer protocol trpc http.
+      timeout: 10000  # Maximum request processing time.
+      serialization: 2  # Serialization type 0-pb 1-jce 2-json 3-flatbuffer, do not configure by default
+    - callee: trpc.test.helloworld.Greeter1  # The service name of the backend service protocol file, if the callee is the same as the name below, you only need to configure one.
+      target: consul://trpc.test.helloworld.Greeter1  # Backend service address consul.
+      network: tcp  # The network type of the backend service tcp udp.
+      protocol: http  # Application layer protocol trpc http.
+      timeout: 10000  # Maximum request processing time.
+      serialization: 2  # Serialization type 0-pb 1-jce 2-json 3-flatbuffer, do not configure by default.
