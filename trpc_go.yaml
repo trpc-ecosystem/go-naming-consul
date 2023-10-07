@@ -34,10 +34,10 @@ client:  # Backend configuration for client calls.
       network: tcp  # The network type of the backend service tcp udp.
       protocol: http  # Application layer protocol trpc http.
       timeout: 10000  # Maximum request processing time.
-      serialization: 2  # Serialization type 0-pb 1-jce 2-json 3-flatbuffer, do not configure by default
+      serialization: 2  # Serialization type 0-pb 2-json 3-flatbuffer, do not configure by default
     - callee: trpc.test.helloworld.Greeter1  # The service name of the backend service protocol file, if the callee is the same as the name below, you only need to configure one.
       target: consul://trpc.test.helloworld.Greeter1  # Backend service address consul.
       network: tcp  # The network type of the backend service tcp udp.
       protocol: http  # Application layer protocol trpc http.
       timeout: 10000  # Maximum request processing time.
-      serialization: 2  # Serialization type 0-pb 1-jce 2-json 3-flatbuffer, do not configure by default.
+      serialization: 2  # Serialization type 0-pb 2-json 3-flatbuffer, do not configure by default.
