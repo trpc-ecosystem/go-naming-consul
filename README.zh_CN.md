@@ -1,5 +1,13 @@
 # tRPC Consul 名字服务
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/trpc-ecosystem/go-naming-consul.svg)](https://pkg.go.dev/github.com/trpc-ecosystem/go-naming-consul)
+[![Go Report Card](https://goreportcard.com/badge/github.com/trpc.group/trpc-go/trpc-naming-consul)](https://goreportcard.com/report/github.com/trpc.group/trpc-go/trpc-naming-consul)
+[![LICENSE](https://img.shields.io/github/license/trpc-ecosystem/go-naming-consul.svg?style=flat-square)](https://github.com/trpc-ecosystem/go-naming-consul/blob/main/LICENSE)
+[![Releases](https://img.shields.io/github/release/trpc-ecosystem/go-naming-consul.svg?style=flat-square)](https://github.com/trpc-ecosystem/go-naming-consul/releases)
+[![Docs](https://img.shields.io/badge/docs-latest-green)](http://test.trpc.group.woa.com/docs/)
+[![Tests](https://github.com/trpc-ecosystem/go-naming-consul/actions/workflows/prc.yaml/badge.svg)](https://github.com/trpc-ecosystem/go-naming-consul/actions/workflows/prc.yaml)
+[![Coverage](https://codecov.io/gh/trpc-ecosystem/go-naming-consul/branch/main/graph/badge.svg)](https://app.codecov.io/gh/trpc-ecosystem/go-naming-consul/tree/main)
+
 ## 关于 consul
 
 见 [HashiCorp - Consul](https://www.consul.io/) 
