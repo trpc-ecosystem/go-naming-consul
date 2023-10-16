@@ -17,6 +17,7 @@ import (
 	"testing"
 
 	. "github.com/glycerine/goconvey/convey"
+	trpc "trpc.group/trpc-go/trpc-go"
 )
 
 func TestPlugin_Setup(t *testing.T) {
