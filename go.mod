@@ -8,7 +8,7 @@ require (
 	github.com/golang/mock v1.4.4
 	github.com/hashicorp/consul/api v1.8.1
 	golang.org/x/sync v0.1.0
-	trpc.group/trpc-go/trpc-go v0.0.0-20231007030028-60e879fb57b8
+	trpc.group/trpc-go/trpc-go v1.0.0
 )
 
 require (
