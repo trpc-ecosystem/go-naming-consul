@@ -60,7 +60,7 @@ main 入口：
 package main
 
 import (
-    "trpc.group/trpc-go/trpc-go"
+  trpc  "trpc.group/trpc-go/trpc-go"
     "trpc.group/trpc-go/trpc-go/server"
     _ "trpc.group/trpc-go/trpc-naming-consul"
 )
