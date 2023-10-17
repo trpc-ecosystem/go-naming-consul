@@ -17,14 +17,14 @@ import (
 	"testing"
 
 	. "github.com/glycerine/goconvey/convey"
+	"github.com/stretchr/testify/require"
 	trpc "trpc.group/trpc-go/trpc-go"
+	// register http codec to avoid panic when calling trpc.NewServer() without stub code
+	_ "trpc.group/trpc-go/trpc-go/http"
 )
 
 func TestPlugin_Setup(t *testing.T) {
-	Convey("测试配置文件加载", t, func() {
-		s := trpc.NewServer()
-		So(s, ShouldNotBeNil)
-	})
+	require.NotNil(t, trpc.NewServer())
 }
 
 func Test_convertServiceRegister2ServiceOptions(t *testing.T) {
