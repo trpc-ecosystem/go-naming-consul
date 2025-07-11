@@ -2,7 +2,7 @@
 //
 // Tencent is pleased to support the open source community by making tRPC available.
 //
-// Copyright (C) 2023 THL A29 Limited, a Tencent company.
+// Copyright (C) 2023 Tencent.
 // All rights reserved.
 //
 // If you have downloaded a copy of the tRPC source code from Tencent,
@@ -19,6 +19,7 @@ import (
 	. "github.com/glycerine/goconvey/convey"
 	"github.com/stretchr/testify/require"
 	trpc "trpc.group/trpc-go/trpc-go"
+
 	// register http codec to avoid panic when calling trpc.NewServer() without stub code
 	_ "trpc.group/trpc-go/trpc-go/http"
 )
